@@ -1,5 +1,4 @@
 from .trainer_pytorch import PytorchTrainer
-from .trainer_keras import KerasTrainer
 
 def get_trainer(backend, **kwargs):
     """
@@ -21,7 +20,6 @@ def get_trainer(backend, **kwargs):
     """
     backends = {
         "pytorch": PytorchTrainer,
-        "keras": KerasTrainer,
     }
     if backend not in backends:
         raise ValueError(f"Unknown backend: {backend}")

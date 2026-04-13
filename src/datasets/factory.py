@@ -1,5 +1,3 @@
-from .coco_dataset import COCODataset
-from .random_dataset import RandomDataset
 from .images_to_predict import ImageDataset
 from .atlas_dataset import AtlasDataset
 from .transforms.keypoints_to_heatmaps import keypoints_to_heatmaps_np
@@ -19,8 +17,7 @@ def get_dataset(
     additional keyword arguments to the dataset constructor.
 
     Args:
-        name (str): Name of the dataset to create. Supported values are
-            "coco" and "random".
+        name (str): Name of the dataset to create.
         load (str, optional): Path or identifier used to load dataset data.
             Only applicable to datasets that support loading from disk.
         num_samples (int, optional): Number of samples to use from the dataset.
@@ -37,8 +34,6 @@ def get_dataset(
     """
     # Mapping from dataset name to dataset class
     datasets = {
-        "coco": COCODataset,
-        "random": RandomDataset,
         "images": ImageDataset,
         "atlas": AtlasDataset,
     }
