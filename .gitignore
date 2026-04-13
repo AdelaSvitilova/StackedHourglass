@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+tmp.py
+*/coco_full
+*/atlas_full
+results/*
+logs/*
+help.txt
+tmp/*
